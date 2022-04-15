@@ -25,10 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        
+        $account = Account::where('user_id',Auth()->id())->get();
 
-       
-        return view('home');
+        return view('home',['account'=> $account]);
     }
 
 

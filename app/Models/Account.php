@@ -14,5 +14,6 @@ class Account extends Model
         'user_id',
         'name',
         'amount',
+        'is_default',
     ];
 }

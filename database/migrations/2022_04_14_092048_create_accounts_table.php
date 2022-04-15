@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
             $table->integer('amount')->nullable();
+            $table->tinyInteger('is_default')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
